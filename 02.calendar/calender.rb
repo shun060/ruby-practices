@@ -3,7 +3,6 @@ require "optparse"
 require "paint"
 
 class Calender
-
   def initialize(year: Date.today.year, month: Date.today.month)
     @year = year
     @month = month
