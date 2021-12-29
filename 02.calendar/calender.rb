@@ -18,12 +18,13 @@ class Calender
 
     last_day = Date.new(@year, @month, -1).day
     (1..last_day).each do |date|
-      if Date.new(@year, @month, date) == Date.today
+      current_date = Date.new(@year, @month, date)
+      if  current_date == Date.today
         print "\e[37m\e[40m#{date.to_s.rjust(2)}\e[0m" + " "
       else 
         print date.to_s.rjust(2) + " "
       end
-      if Date.new(@year, @month, date).saturday?
+      if current_date.saturday?
         print "\n" 
       end
     end
