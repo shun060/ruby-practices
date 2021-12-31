@@ -20,12 +20,12 @@ class Calender
     
     (1..last_day).each do |day|
       current_date = Date.new(@year, @month, day)
-      align_day = day.to_s.rjust(2)
+      aligned_day = day.to_s.rjust(2)
 
       if current_date == Date.today
-        print "\e[37m\e[40m#{align_day}\e[0m" + " "
+        print "\e[37m\e[40m#{aligned_day}\e[0m" + " "
       else 
-        print align_day + " "
+        print aligned_day + " "
       end
       if current_date.saturday?
         print "\n" 
